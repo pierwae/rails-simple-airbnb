@@ -1,0 +1,9 @@
+<p><%= link_to '← Back', flats_path %></p>
+<div class='card p-3'>
+  <h3><%= @flat.name %></h3>
+  <p><strong>Address: </strong><%= @flat.address %></p>
+  <p><strong>Price: </strong><%= @flat.price_per_night %>$/night</p>
+  <p><strong>Guests: </strong><%= @flat.number_of_guests %></p>
+  <p><strong>Description: </strong><%= @flat.description %></p>
+  <p><%= link_to 'Edit', edit_flat_path %> - <%= link_to 'Delete', flat_path, method: :delete, data: { confirm: 'Are you sure' } %></p>
+</div>

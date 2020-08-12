@@ -1,0 +1,19 @@
+<p><%= link_to '← Cancel', flat_path(@flat) %></p>
+
+<div class="card p-3">
+  <%= simple_form_for @flat do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :name %>
+
+    <%= f.input :address %>
+
+    <%= f.input :description %>
+
+    <%= f.input :price_per_night %>
+
+    <%= f.input :number_of_guests %>
+
+    <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+</div>
