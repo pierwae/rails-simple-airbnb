@@ -1,9 +1,12 @@
-<% @flats.each do |flat| %>
-  <div class='card p-3 mb-3'>
-    <h3><%= flat.name %></h3>
-    <p><strong>Address: </strong><%= flat.address %></p>
-    <p><strong>Price: </strong><%= flat.price_per_night %>$/night</p>
-    <p><strong>Guests: </strong><%= flat.number_of_guests %></p>
-    <%= link_to 'More info', flat_path(flat) %>
-  </div>
-<% end %>
+<div class='row'>
+  <% @flats.each do |flat| %>
+    <div class='card col-4 p-3'>
+      <h3><%= flat.name %></h3>
+      <img src="https://picsum.photos/200/200" class="rounded mx-auto d-block my-3" alt="">
+      <p><strong>Address: </strong><%= flat.address %></p>
+      <p><strong>Price: </strong><%= flat.price_per_night %>$/night</p>
+      <p><strong>Guests: </strong><%= flat.number_of_guests %></p>
+      <%= link_to 'More info', flat_path(flat) %>
+    </div>
+  <% end %>
+</div>
